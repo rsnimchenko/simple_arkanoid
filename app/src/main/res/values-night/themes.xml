@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="Theme.Simple_arkanoid" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
