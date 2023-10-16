@@ -1,8 +1,12 @@
 package com.rsnimchenko.simple_arkanoid.game
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import com.rsnimchenko.simple_arkanoid.FullScreen
+import androidx.activity.addCallback
+import androidx.appcompat.app.AppCompatActivity
+import com.rsnimchenko.simple_arkanoid.ui.MainActivity
+import com.rsnimchenko.simple_arkanoid.util.FullScreen
+import com.rsnimchenko.simple_arkanoid.util.SCORE
 
 class GameActivity : AppCompatActivity() {
     private lateinit var gameView: GameView
@@ -14,6 +18,12 @@ class GameActivity : AppCompatActivity() {
 
         gameView = GameView(this)
         setContentView(gameView)
+        onBackPressedDispatcher.addCallback {
+            startActivity(Intent(this@GameActivity, MainActivity::class.java).apply {
+                putExtra(SCORE, -1)
+            })
+            finish()
+        }
     }
 
     override fun onResume() {

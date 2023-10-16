@@ -1,4 +1,4 @@
-package com.rsnimchenko.simple_arkanoid
+package com.rsnimchenko.simple_arkanoid.util
 
 import android.app.Activity
 import android.os.Build
@@ -24,7 +24,8 @@ class FullScreen {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 activity.window?.insetsController?.apply {
                     hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
-                    systemBarsBehavior = WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+                    systemBarsBehavior =
+                        WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
                 }
             } else {
                 @Suppress("DEPRECATION")

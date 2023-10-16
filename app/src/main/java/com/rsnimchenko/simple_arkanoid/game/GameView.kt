@@ -12,8 +12,8 @@ import android.util.Log
 import android.view.MotionEvent
 import android.view.SurfaceView
 import androidx.window.layout.WindowMetricsCalculator
-import com.rsnimchenko.simple_arkanoid.SCORE
 import com.rsnimchenko.simple_arkanoid.ui.MainActivity
+import com.rsnimchenko.simple_arkanoid.util.SCORE
 
 class GameView(context: Context) : SurfaceView(context), Runnable {
     private var gameThread: Thread? = null
